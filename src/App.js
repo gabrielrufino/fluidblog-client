@@ -11,10 +11,10 @@ class App extends Component {
       <div>
         <Navbar />
         <div className='row'>
-          <div className='col-lg-4 p-2'>
+          <div className='col-lg-3'>
             <Aside />
           </div>
-          <div className='col-lg-8 p-2'>
+          <div className='col-lg-9'>
             <Posts />
           </div>
         </div>

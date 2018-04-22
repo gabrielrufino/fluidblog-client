@@ -23,7 +23,7 @@ class Posts extends Component {
       <div className='col-12 mb-4'>
         <div className='card'>
           <div className='card-body'>
-            <h1 className='card-title'>{ post.title }</h1>
+            <h2 className='card-title display-4'>{ post.title }</h2>
             <p className='card-text'>
               { post.text }
             </p>
