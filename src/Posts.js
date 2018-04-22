@@ -7,7 +7,8 @@ class Posts extends Component {
     super(props)
 
     this.state = {
-      posts: []
+      posts: [],
+      loadingPosts: false
     }
   }
   componentDidMount () {
@@ -19,17 +20,22 @@ class Posts extends Component {
   }
   renderPost (post) {
     return (
-      <article>
-        <h1 className='display-4'>{ post.title }</h1>
-        <p className='lead'>
-          { post.text }
-        </p>
-      </article>
+      <div className='col-12 mb-4'>
+        <div className='card'>
+          <div className='card-body'>
+            <h1 className='card-title'>{ post.title }</h1>
+            <p className='card-text'>
+              { post.text }
+            </p>
+            <a className='btn btn-primary' href='/'>Continuar lendo</a>
+          </div>
+        </div>
+      </div>
     )
   }
   render () {
     return (
-      <div>
+      <div className='row'>
         { this.state.posts.map(this.renderPost) }
       </div>
     )
