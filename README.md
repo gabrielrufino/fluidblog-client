@@ -4,15 +4,24 @@ Blog with ReactJS and Firebase
 
 ## Get Start
 
-git clone https://github.com/gabrielrufino/fluidblog<br>
-cd fluidblog<br>
-npm install<br>
+### Cloning
+
+<pre>
+  git clone https://github.com/gabrielrufino/fluidblog<br>
+  cd fluidblog<br>
+</pre>
+
+### Use npm or yarn to install dependencies
+
+<pre>
+  yarn || npm install
+</pre>
 
 ## Sync with firebase
 
 Set the connection to the firebase in the file <strong>src/base.js</strong>.
 
-<code>
+<pre>
   const config = {
     apiKey: 'apiKey value',
     authDomain: 'authDomain value',
@@ -21,12 +30,12 @@ Set the connection to the firebase in the file <strong>src/base.js</strong>.
     storageBucket: 'storageBucket value',
     messagingSenderId: 'messagingSenderId value'
   }
-</code>
+</pre>
 
 ## Post JSON
-<code>
+<pre>
   {
 		"title": "Post title",
     "text": "Post text"
   }
-</code>
+</pre>
