@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = (props) => {
   return (
-    <footer className='bg-dark text-center text-white py-2 fixed-bottom'>
-      Made by <a href='https://www.gabrielrufino.com'>Gabriel Rufino</a>
+    <footer className='bg-secondary text-center text-white py-3 mt-5'>
+      Made by Gabriel Rufino | MIT License
     </footer>
   )
 }

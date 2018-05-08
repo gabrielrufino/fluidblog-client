@@ -35,7 +35,8 @@ Set the connection to the firebase in the file <strong>src/base.js</strong>.
 ## Post JSON
 <pre>
   {
-		"title": "Post title",
+    "title": "Post title",
+    "subtitle": "Post subtitle",
     "text": "Post text"
   }
 </pre>

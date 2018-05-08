@@ -20,14 +20,15 @@ class Posts extends Component {
   }
   renderPost (post) {
     return (
-      <div className='col-12 mb-4'>
+      <div className='col-4 my-2'>
         <div className='card'>
+          <img className='card-img-top' src='img/img.png' alt='' />
           <div className='card-body'>
-            <h2 className='card-title display-4'>{ post.title }</h2>
+            <h5 className='card-title'>{ post.title }</h5>
             <p className='card-text'>
-              { post.text }
+              { post.subtitle }
             </p>
-            <a className='btn btn-primary' href='/'>Continuar lendo</a>
+            <a className='btn btn-primary btn-block' href='/'>Continue reading</a>
           </div>
         </div>
       </div>
@@ -35,8 +36,31 @@ class Posts extends Component {
   }
   render () {
     return (
-      <div className='row'>
-        { this.state.posts.map(this.renderPost) }
+      <div>
+        <div className='jumbotron'>
+          <h1 className='display-4'>Last post</h1>
+          <hr />
+          <div className='row'>
+            <div className='col-md-7'>
+              <h2>Lorem ipsum</h2>
+              <p className='lead text-justify my-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <button className='btn btn-primary btn-block btn-lg'>Continue reading</button>
+            </div>
+            <div className='col-md-5'>
+              <img className='img-fluid' src='img/img.png' alt='' />
+            </div>
+          </div>
+        </div>
+        {/* {
+          this.state.loadingPosts &&
+          <p>Carregando...</p>
+        } */}
+        {
+          !this.state.loadingPosts &&
+          <div className='row'>
+            { this.state.posts.map(this.renderPost) }
+          </div>
+        }
       </div>
     )
   }
