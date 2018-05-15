@@ -9,6 +9,7 @@ import Navbar from './Navbar'
 import Aside from './Aside'
 import Posts from './Posts'
 import About from './About'
+import Login from './Login'
 import NotFound from './NotFound'
 import Footer from './Footer'
 
@@ -26,6 +27,7 @@ class App extends Component {
               <Switch>
                 <Route path='/' exact component={Posts} />
                 <Route path='/about' component={About} />
+                <Route path='/login' component={Login} />
                 <Route path='*' component={NotFound} />
               </Switch>
             </div>
