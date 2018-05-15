@@ -37,6 +37,7 @@ Set the connection to the firebase in the file <strong>src/base.js</strong>.
   {
     "title": "Post title",
     "subtitle": "Post subtitle",
-    "text": "Post text"
+    "text": "Post text",
+    "tags": ["Lorem", "Ipsum"]
   }
 </pre>

@@ -18,10 +18,13 @@ const Navbar = (props) => {
           <li className='nav-item'>
             <Link className='nav-link' to='/about'>About</Link>
           </li>
+          <li className='nav-item'>
+            <Link className='nav-link' to='/newpost'>New post</Link>
+          </li>
         </ul>
       </div>
 
-      <Link className='btn btn-success ml-auto' to='/login'>Log In</Link>
+      <Link className='btn btn-outline-success ml-auto' to='/login'>Sing In</Link>
     </nav>
   )
 }
