@@ -7,8 +7,15 @@ class NewPost extends Component {
     super(props)
 
     this.state = {
-      posts: []
+      title: '',
+      subtitle: '',
+      text: ''
     }
+
+    this.handleTitle = this.handleTitle.bind(this)
+    this.handleSubtitle = this.handleSubtitle.bind(this)
+    this.handleText = this.handleText.bind(this)
+    this.handlePost = this.handlePost.bind(this)
   }
   componentDidMount () {
     base.syncState('posts', {
@@ -18,14 +25,25 @@ class NewPost extends Component {
     })
   }
   handlePost (event) {
-    base.push('/posts', {
-      data: {
-        title: 'test',
-        subtitle: 'test',
-        text: 'test'
-      }
-    })
     event.preventDefault()
+    base.push('/posts', {
+      data: this.state
+    })
+  }
+  handleTitle (event) {
+    this.setState({
+      title: event.target.value
+    })
+  }
+  handleSubtitle (event) {
+    this.setState({
+      subtitle: event.target.value
+    })
+  }
+  handleText (event) {
+    this.setState({
+      text: event.target.value
+    })
   }
   render () {
     return (
@@ -36,21 +54,23 @@ class NewPost extends Component {
             <div className='col-md-7'>
               <div className='form-group'>
                 <label className='text-success'>Title</label>
-                <input className='form-control' type='text' placeholder='Give a title to your post' />
+                <input className='form-control' type='text' placeholder='Give a title to your post' required value={this.state.title} onChange={this.handleTitle} />
               </div>
             </div>
             <div className='col-md-5'>
               <div className='form-group'>
                 <label className='text-success'>Subtitle</label>
-                <input className='form-control' type='text' placeholder='Call to post' />
+                <input className='form-control' type='text' placeholder='Call to post' required value={this.state.subtitle} onChange={this.handleSubtitle} />
               </div>
             </div>
           </div>
           <div className='form-group'>
             <label className='text-success'>Text</label>
-            <textarea className='form-control' placeholder='Write your text here...' rows='20' />
+            <textarea className='form-control' placeholder='Write your text here...' rows='15' required value={this.state.text} onChange={this.handleText} />
           </div>
-          <button className='btn btn-success'>Submit</button>
+          <div className='text-right'>
+            <button type='submit' className='btn btn-success btn-lg px-5'>Submit</button>
+          </div>
         </form>
       </div>
     )
