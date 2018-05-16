@@ -38,6 +38,8 @@ Set the connection to the firebase in the file <strong>src/base.js</strong>.
     "title": "Post title",
     "subtitle": "Post subtitle",
     "text": "Post text",
-    "tags": ["Lorem", "Ipsum"]
+    "metadata": {
+      "date": "DayOfTheWeek Month Day Year HH:MM:SS GMT-0300 (Hora oficial do Brasil)"
+    }
   }
 </pre>

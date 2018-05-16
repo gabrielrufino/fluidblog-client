@@ -27,7 +27,14 @@ class NewPost extends Component {
   handlePost (event) {
     event.preventDefault()
     base.push('/posts', {
-      data: this.state
+      data: {
+        title: this.state.title,
+        subtitle: this.state.subtitle,
+        text: this.state.text,
+        metadata: {
+          data: new Date().toString()
+        }
+      }
     })
   }
   handleTitle (event) {
