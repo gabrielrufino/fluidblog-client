@@ -6,7 +6,7 @@ import Search from './Search'
 class Aside extends Component {
   render () {
     return (
-      <aside>
+      <aside className='container'>
         <div>
           <Writer />
         </div>

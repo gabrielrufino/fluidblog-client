@@ -21,10 +21,10 @@ class App extends Component {
         <div>
           <Navbar />
           <div className='row'>
-            <div className='col-lg-3'>
+            <div className='d-none d-md-block col-md-3 mx-0'>
               <Aside />
             </div>
-            <div className='col-lg-9'>
+            <div className='col-md-9 mx-0'>
               <Switch>
                 <Route path='/' exact component={Posts} />
                 <Route path='/about' component={About} />

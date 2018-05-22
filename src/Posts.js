@@ -20,15 +20,15 @@ class Posts extends Component {
   }
   renderPost (post) {
     return (
-      <div className='col-4 my-2'>
+      <div className='col col-md-4 my-2'>
         <div className='card'>
-          <img className='card-img-top' src='img/img.png' alt='' />
+          <img className='card-img-top' src='img/img.jpg' alt='' />
           <div className='card-body'>
             <h5 className='card-title'>{ post.title }</h5>
             <p className='card-text'>
               { post.subtitle }
             </p>
-            <a className='btn btn-primary btn-block' href='/'>Continue reading</a>
+            <a className='btn btn-info btn-block' href='/'>Continue reading</a>
           </div>
         </div>
       </div>
@@ -36,18 +36,18 @@ class Posts extends Component {
   }
   render () {
     return (
-      <div>
+      <div className='container'>
         <div className='jumbotron'>
           <h1 className='display-4'>Last post</h1>
           <hr />
           <div className='row'>
-            <div className='col-md-7'>
-              <h2>Lorem ipsum</h2>
-              <p className='lead text-justify my-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button className='btn btn-primary btn-block btn-lg'>Continue reading</button>
+            <div className='col-md-5 my-2'>
+              <img className='img-fluid rounded' src='img/img.jpg' alt='' />
             </div>
-            <div className='col-md-5'>
-              <img className='img-fluid' src='img/img.png' alt='' />
+            <div className='col-md-7 my-2'>
+              <h3>Lorem ipsum</h3>
+              <p className='lead text-justify my-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <button className='btn btn-info btn-block btn-lg'>Continue reading</button>
             </div>
           </div>
         </div>

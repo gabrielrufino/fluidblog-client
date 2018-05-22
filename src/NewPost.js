@@ -60,23 +60,23 @@ class NewPost extends Component {
           <div className='form-row'>
             <div className='col-md-7'>
               <div className='form-group'>
-                <label className='text-success'>Title</label>
+                <label className='text-info'>Title</label>
                 <input className='form-control' type='text' placeholder='Give a title to your post' required value={this.state.title} onChange={this.handleTitle} />
               </div>
             </div>
             <div className='col-md-5'>
               <div className='form-group'>
-                <label className='text-success'>Subtitle</label>
+                <label className='text-info'>Subtitle</label>
                 <input className='form-control' type='text' placeholder='Call to post' required value={this.state.subtitle} onChange={this.handleSubtitle} />
               </div>
             </div>
           </div>
           <div className='form-group'>
-            <label className='text-success'>Text</label>
+            <label className='text-info '>Text</label>
             <textarea className='form-control' placeholder='Write your text here...' rows='15' required value={this.state.text} onChange={this.handleText} />
           </div>
           <div className='text-right'>
-            <button type='submit' className='btn btn-success btn-lg px-5'>Submit</button>
+            <button type='submit' className='btn btn-info btn-lg px-5'>Submit</button>
           </div>
         </form>
       </div>
