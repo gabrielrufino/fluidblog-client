@@ -1,6 +1,6 @@
 # fluidblog-client
 
-Blog with ReactJS and Firebase
+Client of the fluidblog project
 
 ## Get Start
 
