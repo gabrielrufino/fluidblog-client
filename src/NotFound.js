@@ -2,7 +2,9 @@ import React from 'react'
 
 const NotFound = (props) => {
   return (
-    <div>Not Found</div>
+    <div>
+      <h1 className="display-4 text-center">Not Found</h1>
+    </div>
   )
 }
 

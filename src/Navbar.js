@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
   return (
-    <nav className='navbar navbar-expand-md navbar-light bg-light fixed-top'>
+    <nav className='navbar navbar-expand-md navbar-dark bg-dark fixed-top'>
       <Link className='navbar-brand' to='/'>fluidblog</Link>
 
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
@@ -14,10 +14,13 @@ const Navbar = (props) => {
           <li className='nav-item'>
             <Link className='nav-link' to='/about'>About</Link>
           </li>
+          <li className='nav-item'>
+            <Link className='nav-link' to='/contact'>Contact</Link>
+          </li>
         </ul>
       </div>
 
-      <Link className='btn btn-outline-info px-4 ml-auto mr-1' to='/login'>Sign In</Link>
+      <Link className='btn btn-info px-4 ml-auto mr-1' to='/login'>Sign In</Link>
       <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
         <i className='navbar-toggler-icon' />
       </button>

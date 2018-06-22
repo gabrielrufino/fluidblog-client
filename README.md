@@ -1,4 +1,4 @@
-# fluidblog
+# fluidblog-client
 
 Blog with ReactJS and Firebase
 
@@ -7,7 +7,7 @@ Blog with ReactJS and Firebase
 ### Cloning
 
 <pre>
-git clone https://github.com/gabrielrufino/fluidblog
+git clone https://github.com/gabrielrufino/fluidblog-client
 cd fluidblog
 </pre>
 
