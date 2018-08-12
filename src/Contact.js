@@ -66,14 +66,19 @@ class Contact extends Component {
         <hr />
         <div>
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label className="text-info" htmlFor="name">Name</label>
-              <input className="form-control" type="text" id="name" value={this.state.name} onChange={this.handleName} placeholder="Your Name" required />  
-            </div>
-
-            <div className="form-group">
-              <label className="text-info" htmlFor="email">E-mail</label>
-              <input className="form-control" type="email" id="email" value={this.state.email} onChange={this.handleEmail} placeholder="youremail@yourdomain.com" required />
+            <div className="form-row">
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label className="text-info" htmlFor="name">Name</label>
+                  <input className="form-control" type="text" id="name" value={this.state.name} onChange={this.handleName} placeholder="Your Name" required />  
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label className="text-info" htmlFor="email">E-mail</label>
+                  <input className="form-control" type="email" id="email" value={this.state.email} onChange={this.handleEmail} placeholder="youremail@yourdomain.com" required />
+                </div>
+              </div>
             </div>
 
             <div className="form-group">

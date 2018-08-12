@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
+import LastPost from './Posts/LastPost'
 import base from './base'
 
 class Posts extends Component {
@@ -7,8 +9,7 @@ class Posts extends Component {
     super(props)
 
     this.state = {
-      posts: [],
-      loadingPosts: false
+      posts: []
     }
 
     this.renderPost = this.renderPost.bind(this)
@@ -20,28 +21,9 @@ class Posts extends Component {
       asArray: true
     })
   }
-  renderLastPost() {
-    
+  renderPost (post, index, posts) {
     return (
-      <div className='jumbotron'>
-        <h1 className='display-4'>Last post</h1>
-        <hr />
-        <div className='row'>
-          <div className='col-md-5 my-2'>
-            <img className='img-fluid rounded' src='img/img.jpg' alt='' />
-          </div>
-          <div className='col-md-7 my-2'>
-            <h3>Lorem Ipsum</h3>
-            <p className='lead text-justify my-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <button className='btn btn-info btn-block btn-lg'>Continue reading</button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-  renderPost (post) {
-    return (
-      <div key={ this.state.posts.indexOf(post) } className='col col-md-4 my-2'>
+      <div key={this.state.posts.indexOf(post)} className='col col-md-4 my-2'>
         <div className='card'>
           <img className='card-img-top' src='img/img.jpg' alt='' />
           <div className='card-body'>
@@ -49,7 +31,7 @@ class Posts extends Component {
             <p className='card-text'>
               { post.subtitle }
             </p>
-            <a className='btn btn-info btn-block' href='/'>Continue reading</a>
+            <Link className='btn btn-info btn-block' to='/'>Continue reading</Link>
           </div>
         </div>
       </div>
@@ -58,19 +40,10 @@ class Posts extends Component {
   render () {
     return (
       <div className='container'>
-        {
-          this.renderLastPost()
-        }
-        {/* {
-          this.state.loadingPosts &&
-          <p>Carregando...</p>
-        } */}
-        {
-          !this.state.loadingPosts &&
-          <div className='row'>
-            { this.state.posts.map(this.renderPost) }
-          </div>
-        }
+        <LastPost />
+        <div className='row'>
+          { this.state.posts.map(this.renderPost) }
+        </div>
       </div>
     )
   }

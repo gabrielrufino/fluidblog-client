@@ -12,6 +12,7 @@ import About from './About'
 import Contact from './Contact'
 import NotFound from './NotFound'
 import Footer from './Footer'
+import Post from './Post'
 
 class App extends Component {
   render () {
@@ -28,6 +29,7 @@ class App extends Component {
                 <Route path='/' exact component={Posts} />
                 <Route path='/about' component={About} />
                 <Route path='/contact' component={Contact} />
+                <Route path='/post/:id' component={Post} />
                 <Route path='*' component={NotFound} />
               </Switch>
             </div>
